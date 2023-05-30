@@ -1,41 +1,72 @@
 html{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
 }
 body{
-    margin: 0px;
+margin: 0px;
 }
 .nav-bar{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(32, 108, 221);
-    margin: 0px;
-    width: 100%;
-  }
-  .nav-bar > img{
-    margin-top:10px;
-  }
-  
-  .nav-content{
-    list-style: none;
-    display: flex;
-   
-  }
+display: flex;
+justify-content: space-between;
+background-color: rgb(32, 108, 221);
+margin: 0px;
+width: 100%;
+}
+.nav-bar > img{
+margin-top:10px;
+}
 
-  .nav-content > li {
-    padding: 10px;
-    min-width: 130px;
-  }
+.nav-content{
+list-style: none;
+display: flex;
 
-  .nav-content > li > a {
-    text-decoration: none;
-    color: black;
-    transition-duration: .5s;
-    padding: 10px;
-  }
+}
 
-  .nav-content > li :hover {
-    background-color: yellow;
-  }
+.nav-content > li {
+padding: 10px;
+min-width: 130px;
+}
+
+.nav-content > li > a {
+text-decoration: none;
+color: black;
+transition-duration: .5s;
+padding: 10px;
+}
+
+.nav-content > li :hover {
+background-color: yellow;
+}
+
+.bars-icon{
+    margin-top: 10px;
+    margin-right: 5px;
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .nav-content{
+        display: none;
+    }
+
+    .bars-icon{
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar.responsive {position: relative;}
+    .nav-bar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav-bar.responsive > .nav-content  {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
