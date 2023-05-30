@@ -20,7 +20,7 @@ export default function Home() {
       <nav className='nav-bar'>
       
         <img src = 'logo.png' alt = 'logo' className = 'logo' width='50px' height='50px'/>
-        
+        <h1>WebSite</h1>
         <ul className="nav-content">
           <li><a href = '#'>Video Games</a></li>
           <li><a href = '#'>Gift Cards</a></li>
