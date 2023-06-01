@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 //import styles from './page.module.css'
 "use client";
 import styles from "./style.css";
@@ -13,371 +14,163 @@ export default function Home() {
     }
   }
 
-  const myFunction = (url) => window.location.href = url;
+  const myFunction = (url) => (window.location.href = url);
 
   return (
-    <main className={styles.main}>
-      <nav className="nav-bar">
-        <img src="logocool.png" alt="logo" className="logo" width="150px" />
-
-        <ul className="nav-content">
-          <li>
-            <a href="#">Video Games</a>
-          </li>
-          <li>
-            <a href="#">Gift Cards</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <a
-          href="javascript:void(0);"
-          className="bars-icon"
-          onClick={HamburgerMenuOnClick}
-        >
-          <FontAwesomeIcon icon={faBars} width={30} />
+    <main>
+      <header>
+        <div className="container">
+          <img src="logoCool.png" alt="Logo Image" className="logo"></img>
+          <ul className="nav-content">
+            <li>
+              <a href="#hot-deals">Hot Deals</a>
+            </li>
+            <li>
+              <a href="#play-more-pay-less">Play More Pay Less</a>
+            </li>
+            <li>
+              <a href="#xbox">Xbox</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div className="landing">
+        <div className="container">
+          <div className="text">
+            <h1>Unlock the Ultimate Gaming Experience</h1>
+            <p>
+              Welcome to the ultimate gaming destination, where your gaming
+              dreams come true!
+            </p>
+          </div>
+          <div className="image">
+            <img
+              src="https://cdn.dribbble.com/users/5115504/screenshots/12481958/media/c2f84b22f6a0774c4e100efef0cd5244.gif"
+              alt="Landing Image"
+            ></img>
+          </div>
+        </div>
+        <a href="#hot-deals">
+          <img
+            src="./double-down-arrows.png"
+            alt="double down arrow image"
+          ></img>
         </a>
-      </nav>
-      <div className="home-page">
-        <div className="bigboss1">
-          <div className="text">
-            <div className="hotdeals">
-              <h2>HOT&#128293; Deals</h2>
-            </div>
-            <div className="line"></div>
+      </div>
+      {/* Hot Deals Section */}
+      <div className="hot-deals" id="hot-deals">
+        <h2 class="main-title">Hot Deals</h2>
+        <div class="container">
+          <div className="box">
+            <img
+              src="https://www.games2egypt.com/Images/Products/41550?fileFormat=0"
+              alt="Game 1 Image"
+            ></img>
+            <h3>Hogwarts Legacy (PS5)</h3>
+            <h4>1990 EGP</h4>
           </div>
-          <div className="games-flex">
-            <div className="game-hogwarts">
-              <div class="card" onClick={() => myFunction('https://www.hogwartslegacy.com/en-gb')}>
-                <div class="wrapper">
-                  <img
-                    src="https://www.games2egypt.com/Images/Products/41550?fileFormat=0"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://impulsogeek.com/wp-content/uploads/2023/02/Logo-Hogwarts-Legacy.png"
-                  class="title"
-                />
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/yTXDDExaBC9CdKogHinDnIqJ.png"
-                  class="character"
-                />
-              </div>
-              <div className="pricing">
-                <h3>
-                  HOGWARTS(P5)
-                  <br />
-                  1000.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-godofwar">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://product.takwene.com/Files/Catalog/Products/3284/photo_06f1ad30-bbf5-460a-a7ac-a876b29fb767.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/37565-god-of-war-logo-photos/725x189"
-                  class="title"
-                />
-                <img
-                  src="https://www.games2egypt.com/Images/Products/62459?fileFormat=0&height=300"
-                  class="character"
-                  height={230}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  GOD OF WAR(P4)
-                  <br />
-                  1300.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-uncharted">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/I/510y0SxTi+L._AC_UF1000,1000_QL80_.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/21599-uncharted-logo-image/627x204"
-                  class="title"
-                />
-                <img
-                  src="https://www.pngkey.com/png/full/155-1559360_nathan-drake-uncharted-4-png-uncharted-4-a.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  UNCHARTED(P4)
-                  <br />
-                  1200.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-streetfighter">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6528/6528693_sd.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/CreEfSV23RtMWePDxSwZeuDi.png"
-                  class="title"
-                />
-                <img
-                  src="https://cdn.dashfight.com/eb459169e64464436b03f3e0b86589345c2665ae.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  STREET FIGHTER(P4)
-                  <br />
-                  1900.00EGP
-                </h3>
-              </div>
-            </div>
+          <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/61OlrxlXo0L.jpg"
+              alt="Game 2 Image"
+            ></img>
+            <h3>Jedi (PS5)</h3>
+            <h4>2000 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/717xPIQzxBL._AC_UF1000,1000_QL80_.jpg"
+              alt="Game 3 Image"
+            ></img>
+            <h3>God Of Wars(PS4)</h3>
+            <h4>1990 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/71Ku7i1sXUL.jpg"
+              alt="Game 4 Image"
+            ></img>
+            <h3>The Last Of Us(PS4)</h3>
+            <h4>1990 EGP</h4>
           </div>
         </div>
-        <div className="bigboss2">
-          <div className="text">
-            <div className="hotdeals">
-              <h2>PLAY MORE...PAY LESS</h2>
-            </div>
-            <div className="line"></div>
+      </div>
+      {/* Play More Pay Less Section */}
+      <div className="play-more-pay-less" id="play-more-pay-less">
+        <h2 class="main-title">Play More Pay Less</h2>
+        <div class="container">
+        <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/81nXJXDWZLL.jpg"
+              alt="Game 1 Image"
+            ></img>
+            <h3>Plants Vs Zombies(PS4)</h3>
+            <h4>PRE OWNED 400 EGP</h4>
           </div>
-          <div className="games-flex">
-            <div className="game-hogwarts">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://www.games2egypt.com/Images/Products/41550?fileFormat=0"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://impulsogeek.com/wp-content/uploads/2023/02/Logo-Hogwarts-Legacy.png"
-                  class="title"
-                />
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/yTXDDExaBC9CdKogHinDnIqJ.png"
-                  class="character"
-                />
-              </div>
-              <div className="pricing">
-                <h3>
-                  HOGWARTS(P5)
-                  <br />
-                  1000.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-godofwar">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://product.takwene.com/Files/Catalog/Products/3284/photo_06f1ad30-bbf5-460a-a7ac-a876b29fb767.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/37565-god-of-war-logo-photos/725x189"
-                  class="title"
-                />
-                <img
-                  src="https://www.games2egypt.com/Images/Products/62459?fileFormat=0&height=300"
-                  class="character"
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  GOD OF WAR(P4)
-                  <br />
-                  1300.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-uncharted">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/I/510y0SxTi+L._AC_UF1000,1000_QL80_.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/21599-uncharted-logo-image/627x204"
-                  class="title"
-                />
-                <img
-                  src="https://www.pngkey.com/png/full/155-1559360_nathan-drake-uncharted-4-png-uncharted-4-a.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  UNCHARTED(P4)
-                  <br />
-                  1200.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-streetfighter">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6528/6528693_sd.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/CreEfSV23RtMWePDxSwZeuDi.png"
-                  class="title"
-                />
-                <img
-                  src="https://cdn.dashfight.com/eb459169e64464436b03f3e0b86589345c2665ae.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  STREET FIGHTER(P4)
-                  <br />
-                  1900.00EGP
-                </h3>
-              </div>
-            </div>
+          <div className="box">
+            <img
+              src="https://www.games2egypt.com/Images/Products/36387?fileFormat=0&height=500"
+              alt="Game 2 Image"
+            ></img>
+            <h3>Saints Row (PS4)</h3>
+            <h4>PRE OWNED 750 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/91gfAHAu2hL.jpg"
+              alt="Game 3 Image"
+            ></img>
+            <h3>Zombie Army(PS4)</h3>
+            <h4>PRE OWNED 600 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/81LOjMJ-47L._AC_UF1000,1000_QL80_.jpg"
+              alt="Game 4 Image"
+            ></img>
+            <h3>Spider Man(PS5)</h3>
+            <h4>PRE OWNED 1000 EGP</h4>
           </div>
         </div>
-        <div className="bigboss3">
-          <div className="text">
-            <div className="hotdeals">
-              <h2>Xbox</h2>
-            </div>
-            <div className="line"></div>
+      </div>
+      {/* Xbox Section */}
+      <div className="xbox" id="xbox">
+        <h2 class="main-title">Xbox</h2>
+        <div class="container">
+        <div className="box">
+            <img
+              src="https://m.media-amazon.com/images/I/71LSwnEXpXL._AC_UF1000,1000_QL80_.jpg"
+              alt="Game 1 Image"
+            ></img>
+            <h3>Forza Horizon</h3>
+            <h4>2000 EGP</h4>
           </div>
-          <div className="games-flex">
-            <div className="game-hogwarts">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://www.games2egypt.com/Images/Products/41550?fileFormat=0"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://impulsogeek.com/wp-content/uploads/2023/02/Logo-Hogwarts-Legacy.png"
-                  class="title"
-                />
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/yTXDDExaBC9CdKogHinDnIqJ.png"
-                  class="character"
-                />
-              </div>
-              <div className="pricing">
-                <h3>
-                  HOGWARTS(P5)
-                  <br />
-                  1000.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-godofwar">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://product.takwene.com/Files/Catalog/Products/3284/photo_06f1ad30-bbf5-460a-a7ac-a876b29fb767.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/37565-god-of-war-logo-photos/725x189"
-                  class="title"
-                />
-                <img
-                  src="https://www.games2egypt.com/Images/Products/62459?fileFormat=0&height=300"
-                  class="character"
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  GOD OF WAR(P4)
-                  <br />
-                  1300.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-uncharted">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/I/510y0SxTi+L._AC_UF1000,1000_QL80_.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://freepngimg.com/save/21599-uncharted-logo-image/627x204"
-                  class="title"
-                />
-                <img
-                  src="https://www.pngkey.com/png/full/155-1559360_nathan-drake-uncharted-4-png-uncharted-4-a.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  UNCHARTED(P4)
-                  <br />
-                  1200.00EGP
-                </h3>
-              </div>
-            </div>
-            <div className="game-streetfighter">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6528/6528693_sd.jpg"
-                    class="cover-image"
-                  />
-                </div>
-                <img
-                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1408/CreEfSV23RtMWePDxSwZeuDi.png"
-                  class="title"
-                />
-                <img
-                  src="https://cdn.dashfight.com/eb459169e64464436b03f3e0b86589345c2665ae.png"
-                  class="character"
-                  height={250}
-                ></img>
-              </div>
-              <div className="pricing">
-                <h3>
-                  STREET FIGHTER(P4)
-                  <br />
-                  1900.00EGP
-                </h3>
-              </div>
-            </div>
+          <div className="box">
+            <img
+              src="https://product.takwene.com/Files/Catalog/Products/3593/photo_b7408d94-53a8-4584-bc44-4d82665926f0.jpg"
+              alt="Game 2 Image"
+            ></img>
+            <h3>Red Dead 2</h3>
+            <h4>2500 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://product.takwene.com/Files/Catalog/Products/622/photo_e9feb3f8-a1a2-4259-8e09-dc70e27d0c5e.jpg"
+              alt="Game 3 Image"
+            ></img>
+            <h3>Minecraft</h3>
+            <h4>2300 EGP</h4>
+          </div>
+          <div className="box">
+            <img
+              src="https://www.egygamer.com/media/catalog/product/h/a/halo-infinite.jpg"
+              alt="Game 4 Image"
+            ></img>
+            <h3>Halo Infinity</h3>
+            <h4>2300 EGP</h4>
           </div>
         </div>
       </div>
