@@ -10,7 +10,7 @@ margin: 0px;
 .nav-bar{
 display: flex;
 justify-content: space-between;
-background-color: rgb(32, 108, 221);
+background-color: cyan;
 margin: 0px;
 width: 100%;
 }
