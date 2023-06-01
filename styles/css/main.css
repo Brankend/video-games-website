@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #0A0A0A;
+    --secondary-color: #1C1C1C;
+    --accent-color: #22CC88;
+    --hover-color: #22CC88;
+  }
+  
+  body {
+    background: linear-gradient(45deg, var(--primary-color), #0A140A, var(--accent-color));
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+  }
+  
+  .container {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  }
+  
+  .formClass1 {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 3em;
+    height: 330px;
+    border-radius: 20px;
+    border-left: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .signupForm{
+    background: rgba(30, 30, 30, 0.9);
+    padding: 3em;
+    height: 400px;
+    border-radius: 20px;
+    border-left: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+
+  p {
+    font-weight: 500;
+    color: #FFF;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 12px;
+  
+    &:hover {
+      text-shadow: 2px 2px 6px #00000040;
+    }
+  
+    &:active {
+      text-shadow: none;
+    }
+  }
+  
+  input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    border-radius: 5000px;
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  
+    &:hover,
+    &:focus {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+    }
+  
+    &[type="submit"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        cursor: pointer;
+        background: var(--hover-color);
+        transform: scale(1.05);
+      }
+  
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  
+  ::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  }
+  
+  .drop {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    border-left: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  
+    .drop-1 {
+      height: 80px;
+      width: 80px;
+      top: -20px;
+      left: -40px;
+      z-index: -1;
+      animation: pulse 2s infinite;
+      background: var(--accent-color);
+    }
+  
+    .drop-2 {
+      height: 80px;
+      width: 80px;
+      bottom: -30px;
+      right: -10px;
+      animation: pulse 2s infinite;
+      background: var(--accent-color);
+    }
+  
+    .drop-3 {
+      height: 100px;
+      width: 100px;
+      bottom: 120px;
+      right: -50px;
+      z-index: -1;
+      animation: pulse 2s infinite;
+      background: var(--accent-color);
+    }
+  
+    .drop-4 {
+      height: 100px;
+      width: 100px;
+      top: -60px;
+      right: -60px;
+      animation: pulse 2s infinite;
+      background: var(--accent-color);
+    }
+  
+    .drop-5 {
+      height: 60px;
+      width: 60px;
+      bottom: 170px;
+      left: 90px;
+      z-index: -1;
+      animation: pulse 2s infinite;
+      background: var(--accent-color);
+    }
+  
+
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes hover-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .drop:hover {
+    animation: hover-pulse 0.5s infinite;
+  }
+  
+  a,
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  
