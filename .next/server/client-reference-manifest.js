@@ -259,11 +259,11 @@ self.__RSC_MANIFEST={
   },
   "edgeSSRModuleMapping": {},
   "cssFiles": {
-    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\layout": [
-      "static/css/app/layout.css"
-    ],
     "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\page": [
       "static/css/app/page.css"
+    ],
+    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\layout": [
+      "static/css/app/layout.css"
     ]
   },
   "clientModules": {
@@ -939,20 +939,6 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\globals.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/layout.css"
-      ]
-    },
-    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/layout.css"
-      ]
-    },
     "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\style.css#": {
       "id": "null",
       "name": "default",
@@ -983,6 +969,20 @@ self.__RSC_MANIFEST={
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
+    },
+    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\app\\globals.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\Dell\\Downloads\\Web Engineering\\Project\\video-games-website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
     }
   }
 }
