@@ -5,6 +5,7 @@ import { auth } from "../firebase";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import GameCard from "../components/GameCard";
 import { AuthRoute } from "@/components/AuthContext";
+import NavBar from "@/components/NavBar";
 
 export default function About(props) {
   const router = useRouter();
@@ -21,12 +22,16 @@ export default function About(props) {
         console.log(error);
       });
   }
-
+  function OnCartClick(){
+    router.push({
+      pathname: '/cart',
+    });
+  }
   return (
     <AuthRoute>
     <ProtectedRoute>
       <html>
-      <header>
+      {/* <header>
                 <div className="containerHome">
                 <img src="logoCool.png" alt="Logo Image" className="logo"></img>
                 <ul className="nav-content">
@@ -47,9 +52,15 @@ export default function About(props) {
                       <input className="submit2" type="submit" value="Sing Out"/>
                     </form>
                     </li>
+                    <li>
+                      <button onClick={OnCartClick}>
+                        Cart
+                      </button>
+                    </li>
                 </ul>
                 </div>
-      </header>
+      </header> */}
+      <NavBar/>
       <body className="bodyhome">
       <div className="landing">
         <div className="containerHome">
