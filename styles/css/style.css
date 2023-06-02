@@ -387,6 +387,10 @@
     padding-top: var(--section-padding);
     position: relative;
   }
+
+  .xbox {
+    padding-bottom: 50px;
+  }
   
   .hot-deals .containerHome,
   .play-more-pay-less .containerHome,
