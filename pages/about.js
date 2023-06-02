@@ -86,6 +86,51 @@ export default function About(props) {
         <h2 class="main-title">Xbox</h2>
         <GameCard />
       </div>
+            {/* Contact section */}
+            <div className="contact" id="contact">
+        <div className="container">
+          <h2 className="special-heading">Contact</h2>
+          <p>We are born to create</p>
+          <div className="info">
+            <p className="label">Feel free to drop us a line at:</p>
+            <a
+              href="mailto:m4n1_gamesforlife@yahoo.com?subject=Contact"
+              className="link"
+              target="_blank"
+            >
+              m4n1_gamesforlife@yahoo.com
+            </a>
+            <div className="social">
+              Find Us on Social Network
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"
+                  alt="Facebook image"
+                ></img>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                  alt="linkedin image"
+                ></img>
+              </a>
+              <a href="https://twitter.com/home" target="_blank">
+                <img
+                  src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                  alt="twitter image"
+                ></img>
+              </a>
+            </div>
+          </div>
+          <div className="copyright">
+            <img
+              src="https://www.freepnglogos.com/uploads/copyright-png/copyright-logo-png-clipart-best-5.png"
+              alt="copyright icon"
+            ></img>
+            <h2>Copyright by m4n1_gamesforlife 2023</h2>
+          </div>
+        </div>
+      </div>
       </body>
       </html>
     </ProtectedRoute>
