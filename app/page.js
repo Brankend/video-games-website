@@ -37,6 +37,11 @@ export default function Home() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
+          <div id="cart" class="cart" data-totalitems="0">
+            <a href="https://codepen.io/ay_haga/full/yLRmgpB">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
         </div>
       </header>
       <div className="landing">
