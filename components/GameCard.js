@@ -4,13 +4,13 @@ import { db } from '../firebase';
 
 import { useRouter } from "next/router"
 
-const GameCard = () => {
+const GameCard = ({type}) => {
   const [games, setGames] = useState([]);
 
   const router = useRouter();
-
+  console.log(type.toString());
   useEffect(() => {
-    const gamesRef = collection(db, 'Game');
+    const gamesRef = collection(db, type.toString());
     const unsubscribe = onSnapshot(gamesRef, (snapshot) => {
       const records = snapshot.docs.map((gameSnapshot) => {
         const keyName = gameSnapshot.id;
@@ -25,14 +25,17 @@ const GameCard = () => {
     };
   }, []);
 
-  function handleGameClick() {
-    router.push("/desc");
-  }
+  const handleGameClick =(id)=> {
 
+    router.push({
+      pathname: '/desc',
+      query: id,
+    }, '/desc')
+  }
   return (
     <div className="containerHome">
       {games.map((row) => (
-        <div className="box" onClick={handleGameClick}>
+        <div className="box" onClick={()=>handleGameClick(row.data)}>
                 <div className="card">
                     <div className="wrapper">
                     <img src={row.data.coverImage} className="cover-image" />

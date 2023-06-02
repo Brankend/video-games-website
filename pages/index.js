@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useRouter } from "next/router";
-import { AuthContextProvider } from "../components/AuthContext";
+import { AuthSign } from "../components/AuthContext";
 
 export default function Home(props) {
 
@@ -24,7 +24,7 @@ function handleLogin(e) {
     });
 }
   return (
-    <AuthContextProvider>
+    <AuthSign>
       <body className="bodysign">
     <div className="containersign">
       <form className="formClass1" action="" onSubmit={handleLogin}>
@@ -47,7 +47,7 @@ function handleLogin(e) {
       </div>
     </div>
     </body>
-  </AuthContextProvider>
+  </AuthSign>
   );
 }
   

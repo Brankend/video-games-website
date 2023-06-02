@@ -71,6 +71,7 @@
     padding: 0px;
     background: linear-gradient(45deg, var(--primary-color), #0A140A, var(--accent-color));
     background-size: cover;
+    background-attachment: fixed;
   }
   
   .bodyhome {
@@ -387,10 +388,6 @@
     padding-top: var(--section-padding);
     position: relative;
   }
-
-  .xbox {
-    padding-bottom: 50px;
-  }
   
   .hot-deals .containerHome,
   .play-more-pay-less .containerHome,
@@ -503,14 +500,21 @@
   }
   
   /* End Xbox */
+
   /* Start Contact */
   
   .contact {
     padding-top: 30px;
     padding-bottom: 10px;
+    margin-right: 30px;
     background-color: white;
   }
-  
+
+  /* .contact .container {
+    display: flex;
+    justify-content: space-around;
+  }
+   */
   .special-heading {
     color: #EBECED;
     font-size: 100px;
@@ -579,16 +583,5 @@
     width: 20px;
   }
   
-  .copyright {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    align-items: center;
-    font-size: 10px;
-  }
-  
-  .copyright img {
-    height: 15px;
-  }
   
   /* End Contact */

@@ -7,7 +7,7 @@ const AuthContext = createContext({});
 
 export const useAuth = () => useContext(AuthContext);
 
-export const AuthContextProvider = ({ children }) => {
+export const AuthSign = ({ children }) => {
   const [user, setUser] = useState({ email: null, uid: null });
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -19,13 +19,42 @@ export const AuthContextProvider = ({ children }) => {
           email: user.email,
           uid: user.uid,
         });
+        setLoading(false);
         router.push("/about");
       } else {
         setUser({ email: null, uid: null });
+        setLoading(false);
       }
     });
-    setLoading(false);
+    return () => unsubscribe();
+  }, []);
 
+  return (
+    <AuthContext.Provider value={{ user }}>
+      {loading ? null : children}
+    </AuthContext.Provider>
+  );
+};
+
+export const AuthRoute = ({ children }) => {
+  const [user, setUser] = useState({ email: null, uid: null });
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser({
+          email: user.email,
+          uid: user.uid,
+        });
+        setLoading(false);
+      } else {
+        setUser({ email: null, uid: null });
+        setLoading(false);
+        router.push("/");
+      }
+    });
     return () => unsubscribe();
   }, []);
 

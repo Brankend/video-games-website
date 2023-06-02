@@ -4,9 +4,12 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import GameCard from "../components/GameCard";
+import { AuthRoute } from "@/components/AuthContext";
 
 export default function About(props) {
   const router = useRouter();
+  const gameType = ['Game', 'Xbox', 'MoreLess'];
+
   function handleLogOut(e) {
     e.preventDefault();
     signOut(auth)
@@ -20,6 +23,7 @@ export default function About(props) {
   }
 
   return (
+    <AuthRoute>
     <ProtectedRoute>
       <html>
       <header>
@@ -74,20 +78,20 @@ export default function About(props) {
       {/* Hot Deals Section */}
       <div className="hot-deals" id="hot-deals">
         <h2 class="main-title">Hot Deals</h2>
-        <GameCard />
+        <GameCard type={gameType[0]} />
       </div>
       {/* Play More Pay Less Section */}
       <div className="play-more-pay-less" id="play-more-pay-less">
         <h2 class="main-title">Play More Pay Less</h2>
-        <GameCard />
+        <GameCard type={gameType[2]} />
       </div>
       {/* Xbox Section */}
       <div className="xbox" id="xbox">
         <h2 class="main-title">Xbox</h2>
-        <GameCard />
+        <GameCard type={gameType[1]} />
       </div>
-            {/* Contact section */}
-            <div className="contact" id="contact">
+      {/* Contact section */}
+      <div className="contact" id="contact">
         <div className="container">
           <h2 className="special-heading">Contact</h2>
           <p>We are born to create</p>
@@ -122,18 +126,12 @@ export default function About(props) {
               </a>
             </div>
           </div>
-          <div className="copyright">
-            <img
-              src="https://www.freepnglogos.com/uploads/copyright-png/copyright-logo-png-clipart-best-5.png"
-              alt="copyright icon"
-            ></img>
-            <h2>Copyright by m4n1_gamesforlife 2023</h2>
-          </div>
         </div>
       </div>
       </body>
       </html>
     </ProtectedRoute>
+    </AuthRoute>
     )
   }
   

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useRouter } from "next/router";
+import { AuthSign } from "@/components/AuthContext";
 
 export default function Home(props) {
 
@@ -28,7 +29,7 @@ export default function Home(props) {
   
 
   return (
-    <>
+    <AuthSign>
       <div className="containersign">
           <form className="signupForm" action="" onSubmit={handleSignUp}>
             <p>Welcome to our Store</p>
@@ -51,6 +52,6 @@ export default function Home(props) {
           <div className="drop drop-5"></div>
         </div>
       </div>
-    </>
+    </AuthSign>
   );
 }
