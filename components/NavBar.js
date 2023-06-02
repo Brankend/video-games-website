@@ -36,7 +36,9 @@ export default function NavBar(){
     return (
         <header>
                 <div className="containerHome">
+                    <Link href="/about">
                 <img src="logoCool.png" alt="Logo Image" className="logo"></img>
+                </Link>
                 <ul className="nav-content">
                     <li>
                     <a href="#hot-deals">Hot Deals</a>
