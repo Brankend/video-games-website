@@ -67,7 +67,7 @@ export default function CartPage(props) {
                   <p>EGP {item.quantity * item.price}</p>
                 </div>
               ))}
-              <h2>Grand Total: EGP {getTotalPrice()}</h2>
+              <h2>Grand Total: EGP {(getTotalPrice())}</h2>
             </>
           )}
         </div>

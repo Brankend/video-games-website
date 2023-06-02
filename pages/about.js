@@ -81,7 +81,7 @@ export default function About(props) {
         <a href="#hot-deals">
           <img
             className="arrow"
-            src="./double-down-arrows.png"
+            src="arrow.png"
             alt="double down arrow image"
           ></img>
         </a>

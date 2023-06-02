@@ -1,10 +1,10 @@
-import { collection, onSnapshot } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react';
-import { db } from '../firebase';
+import { collection, onSnapshot } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { db } from "../firebase";
 
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
-const GameCard = ({type}) => {
+const GameCard = ({ type }) => {
   const [games, setGames] = useState([]);
 
   const router = useRouter();
@@ -25,31 +25,23 @@ const GameCard = ({type}) => {
     };
   }, []);
 
-  const handleGameClick =(id)=> {
-
-    router.push({
-      pathname: '/desc',
-      query: id,
-    }, '/desc')
-  }
+  const handleGameClick = (id) => {
+    router.push(
+      {
+        pathname: "/desc",
+        query: id,
+      },
+      "/desc"
+    );
+  };
   return (
     <div className="containerHome">
       {games.map((row) => (
-        <div className="box" onClick={()=>handleGameClick(row.data)}>
-                <div className="card">
-                    <div className="wrapper">
-                    <img src={row.data.coverImage} className="cover-image" />
-                    </div>
-                </div>
-                <div className="pricing">
-                    <h3>
-                    {row.data.name}
-                    </h3>
-                    <h4>
-                    {row.data.price} EGP
-                    </h4>
-                </div>
-            </div>
+        <div className="box" onClick={() => handleGameClick(row.data)}>
+          <img src={row.data.coverImage}></img>
+          <h3>{row.data.name}</h3>
+          <h4>{row.data.price} EGP</h4>
+        </div>
       ))}
     </div>
   );
