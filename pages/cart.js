@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import styles from '../styles/CartPage.module.css';
 import {incrementQuantity,decrementQuantity,removeFromCart} from '../redux/cart.slice';
+import NavBar from '@/components/NavBar';
 
 export default function CartPage (props){
 
@@ -18,6 +19,8 @@ export default function CartPage (props){
     }
 
     return (
+      <>
+      <NavBar />
       <div className={styles.container}>
         {cart.length === 0 ? (
           <h1>Your Cart is Empty!</h1>
@@ -37,16 +40,28 @@ export default function CartPage (props){
                   <img src={item.coverImage} height="90" width="65" />
                 </div>
                 <p>{item.name}</p>
-                <p>$ {item.price}</p>
+                <p>EGP {item.price}</p>
                 <p>{item.quantity}</p>
-                <div className={styles.buttons}></div>
-                <p>$ {item.quantity * item.price}</p>
+                <div className={styles.buttons}>
+                <button onClick={() => dispatch(incrementQuantity(item.name))}>
+                  +
+                </button>
+                <button onClick={() => dispatch(decrementQuantity(item.name))}>
+                  -
+                </button>
+                <button onClick={() => dispatch(removeFromCart(item.name))}>
+                  x
+                </button>
+              </div>
+
+                <p>EGP {item.quantity * item.price}</p>
               </div>
             ))}
-            <h2>Grand Total: $ {getTotalPrice()}</h2>
+            <h2>Grand Total: EGP {getTotalPrice()}</h2>
           </>
         )}
       </div>
+      </>
     );
   };
   

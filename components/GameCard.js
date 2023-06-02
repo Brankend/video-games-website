@@ -46,7 +46,7 @@ const GameCard = ({type}) => {
                     {row.data.name}
                     </h3>
                     <h4>
-                    {row.data.price}
+                    {row.data.price} EGP
                     </h4>
                 </div>
             </div>
