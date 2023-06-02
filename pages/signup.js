@@ -29,16 +29,16 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="container">
+      <div className="containersign">
           <form className="signupForm" action="" onSubmit={handleSignUp}>
             <p>Welcome to our Store</p>
-            <input className="submit1" type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Email" />
+            <input className="inputsign" type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Email" />
             <br />
-            <input className="submit1" type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Password" />
+            <input className="inputsign" type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Password" />
             <br />
-            <input className="submit1" type="password" onChange={(e) => setPassword_confirm(e.target.value)} value={password_confirm} placeholder="Confirm Password" />
+            <input className="inputsign" type="password" onChange={(e) => setPassword_confirm(e.target.value)} value={password_confirm} placeholder="Confirm Password" />
             <br />
-            <input className="submit1" type="submit" value="Register" />
+            <input className="inputsign" type="submit" value="Register" />
             <br />
             <a href="/">already a member?</a>
           </form>

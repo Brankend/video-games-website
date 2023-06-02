@@ -20,18 +20,20 @@ function handleLogin(e) {
     })
     .catch((error) => {
       console.log(error);
+      alert("Wrong email or password");
     });
 }
   return (
     <AuthContextProvider>
-    <div className="container">
+      <body className="bodysign">
+    <div className="containersign">
       <form className="formClass1" action="" onSubmit={handleLogin}>
         <p>Welcome to our Store</p>
-        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Email" />
+        <input className="inputsign" type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Email" />
         <br />
-        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Password" />
+        <input className="inputsign" type="password" onChange={(e) => setPassword(e.target.value)} value={password} placeholder="Password" />
         <br />
-        <input type="submit" value="Sign in" />
+        <input className="inputsign" type="submit" value="Sign in" />
         <br />
         <a href="/signup">new member?</a>
       </form>
@@ -44,6 +46,7 @@ function handleLogin(e) {
         <div className="drop drop-5"></div>
       </div>
     </div>
+    </body>
   </AuthContextProvider>
   );
 }

@@ -5,14 +5,14 @@
     --hover-color: #22CC88;
   }
   
-  body {
+  .bodysign {
     background: linear-gradient(45deg, var(--primary-color), #0A140A, var(--accent-color));
-    height: 100vh;
+    height: 90vh;
     font-family: 'Montserrat', sans-serif;
     color: #FFF;
   }
   
-  .container {
+  .containersign {
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -22,7 +22,7 @@
   .formClass1 {
     background: rgba(30, 30, 30, 0.9);
     padding: 3em;
-    height: 330px;
+    height: 420px;
     border-radius: 20px;
     border-left: 1px solid var(--secondary-color);
     border-top: 1px solid var(--secondary-color);
@@ -35,7 +35,8 @@
   .signupForm{
     background: rgba(30, 30, 30, 0.9);
     padding: 3em;
-    height: 400px;
+    height: 490px;
+    width: 360px;
     border-radius: 20px;
     border-left: 1px solid var(--secondary-color);
     border-top: 1px solid var(--secondary-color);
@@ -69,7 +70,7 @@
     }
   }
   
-  input {
+  .inputsign {
     background: transparent;
     width: 200px;
     padding: 1em;
@@ -107,7 +108,47 @@
       }
     }
   }
+
+  .submit2 {
+    background: #1C1C1C;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    border-radius: 5000px;
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
   
+    &:hover,
+    &:focus {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+    }
+  
+    &[type="submit"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        cursor: pointer;
+        background: var(--hover-color);
+        transform: scale(1.05);
+      }
+  
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+ 
   ::placeholder {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
