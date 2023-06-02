@@ -21,7 +21,11 @@ export default function About(props) {
         console.log(error);
       });
   }
-
+  function OnCartClick(){
+    router.push({
+      pathname: '/cart',
+    });
+  }
   return (
     <AuthRoute>
     <ProtectedRoute>
@@ -46,6 +50,11 @@ export default function About(props) {
                     <form onSubmit={handleLogOut}>
                       <input className="submit2" type="submit" value="Sing Out"/>
                     </form>
+                    </li>
+                    <li>
+                      <button onClick={OnCartClick}>
+                        Cart
+                      </button>
                     </li>
                 </ul>
                 </div>

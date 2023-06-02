@@ -3,10 +3,13 @@ import Image from 'next/image'
 import YoutubeVideo from "@/components/YoutubeVideo";
 import { AuthRoute } from "@/components/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cart.slice'
+
 export default function desc(props) {
   const router = useRouter()
-  
   const id = router.query;
+  const dispatch = useDispatch();
   return (
     <AuthRoute>
       <ProtectedRoute>
@@ -21,7 +24,9 @@ export default function desc(props) {
                   <p className="product-price-description">{id.price}</p>
                   <p className="product-description-description">{id.desc}</p>
                   
-                  <button className="add-to-cart-button-description">Add to Cart</button>
+                  <button
+                  onClick={() => dispatch(addToCart(id))} 
+                  className="add-to-cart-button-description">Add to Cart</button>
               </div>
           </div>
         </div>
