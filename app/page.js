@@ -14,7 +14,9 @@ export default function Home() {
     }
   }
 
-  const myFunction = (url) => (window.location.href = url);
+  const myFunction = function (url) {
+    window.location.href = url;
+  };
 
   return (
     <main>
@@ -64,7 +66,7 @@ export default function Home() {
       <div className="hot-deals" id="hot-deals">
         <h2 class="main-title">Hot Deals</h2>
         <div class="container">
-          <div className="box">
+          <div className="box" onClick={() => myFunction("https://google.com")}>
             <img
               src="https://www.games2egypt.com/Images/Products/41550?fileFormat=0"
               alt="Game 1 Image"
@@ -102,7 +104,7 @@ export default function Home() {
       <div className="play-more-pay-less" id="play-more-pay-less">
         <h2 class="main-title">Play More Pay Less</h2>
         <div class="container">
-        <div className="box">
+          <div className="box">
             <img
               src="https://m.media-amazon.com/images/I/81nXJXDWZLL.jpg"
               alt="Game 1 Image"
@@ -140,7 +142,7 @@ export default function Home() {
       <div className="xbox" id="xbox">
         <h2 class="main-title">Xbox</h2>
         <div class="container">
-        <div className="box">
+          <div className="box">
             <img
               src="https://m.media-amazon.com/images/I/71LSwnEXpXL._AC_UF1000,1000_QL80_.jpg"
               alt="Game 1 Image"
@@ -166,11 +168,56 @@ export default function Home() {
           </div>
           <div className="box">
             <img
-              src="https://www.egygamer.com/media/catalog/product/h/a/halo-infinite.jpg"
+              src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6414/6414163_sd.jpg"
               alt="Game 4 Image"
             ></img>
             <h3>Halo Infinity</h3>
             <h4>2300 EGP</h4>
+          </div>
+        </div>
+      </div>
+      {/* Contact section */}
+      <div className="contact" id="contact">
+        <div className="container">
+          <h2 className="special-heading">Contact</h2>
+          <p>We are born to create</p>
+          <div className="info">
+            <p className="label">Feel free to drop us a line at:</p>
+            <a
+              href="mailto:m4n1_gamesforlife@yahoo.com?subject=Contact"
+              className="link"
+              target="_blank"
+            >
+              m4n1_gamesforlife@yahoo.com
+            </a>
+            <div className="social">
+              Find Us on Social Network
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"
+                  alt="Facebook image"
+                ></img>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
+                  alt="linkedin image"
+                ></img>
+              </a>
+              <a href="https://twitter.com/home" target="_blank">
+                <img
+                  src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+                  alt="twitter image"
+                ></img>
+              </a>
+            </div>
+          </div>
+          <div className="copyright">
+            <img
+              src="https://www.freepnglogos.com/uploads/copyright-png/copyright-logo-png-clipart-best-5.png"
+              alt="copyright icon"
+            ></img>
+            <h2>Copyright by m4n1_gamesforlife 2023</h2>
           </div>
         </div>
       </div>

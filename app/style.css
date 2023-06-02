@@ -10,6 +10,11 @@
     box-sizing: border-box;
   }
   
+  ::selection {
+    background-color: var(--main-color);
+    color: white;
+  }
+  
   html {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -371,6 +376,10 @@
     position: relative;
   }
   
+  .xbox {
+    padding-bottom: 50px;
+  }
+  
   .hot-deals .container,
   .play-more-pay-less .container,
   .xbox .container{
@@ -413,13 +422,12 @@
   .play-more-pay-less .container .box img , 
   .xbox .container .box img  {
     max-width: 100%;
-    width: 345px;
-    padding: 10px 40px 0 40px;
+    padding: 40px 10px 40px 10px;
   }
   
   .hot-deals .container .box h3,
-  .xbox .container .box h3,
-  .play-more-pay-less .container .box h3{
+  .play-more-pay-less .container .box h3,
+  .xbox .container .box h3 {
     padding: 10px 10px 5px 10px;
     width: fit-content;
     margin: 0;
@@ -428,8 +436,8 @@
   }
   
   .hot-deals .container .box h4,
-  .xbox .container .box h4,
-  .play-more-pay-less .container .box h4 {
+  .play-more-pay-less .container .box h4,
+  .xbox .container .box h4 {
     padding: 3px 10px 10px 10px;
     width: fit-content;
     color: #666666;
@@ -439,10 +447,10 @@
   
   .hot-deals .container .box h3::before,
   .hot-deals .container .box h4::before,
-  .xbox .container .box h3::before,
-  .xbox .container .box h4::before,
   .play-more-pay-less .container .box h3::before,
-  .play-more-pay-less .container .box h4::before  {
+  .play-more-pay-less .container .box h4::before,
+  .xbox .container .box h3::before,
+  .xbox .container .box h4::before  {
     content: "";
     position: absolute;
     left: -100%;
@@ -461,38 +469,108 @@
   
   .hot-deals .container .box:hover h3,
   .hot-deals .container .box:hover h4,
-  .xbox .container .box:hover h3,
-  .xbox .container .box:hover h4,
   .play-more-pay-less .container .box:hover h3,
-  .play-more-pay-less .container .box:hover h4  {
+  .play-more-pay-less .container .box:hover h4,
+  .xbox .container .box:hover h3,
+  .xbox .container .box:hover h4  {
     color: white;
   }
   
   .hot-deals .container .box:hover h3::before,
   .hot-deals .container .box:hover h4::before,
-  .xbox .container .box:hover h3::before,
-  .xbox .container .box:hover h4::before,
   .play-more-pay-less .container .box:hover h3::before,
-  .play-more-pay-less .container .box:hover h4::before {
+  .play-more-pay-less .container .box:hover h4::before,
+  .xbox .container .box:hover h3::before,
+  .xbox .container .box:hover h4::before {
     left: 0;
   }
   
-  /* End Deals */
+  /* Start Contact */
   
-  /* Start Play More Pay less */
-  
-  .play-more-pay-less {
-    padding-top: var(--section-padding);
-    position: relative;
+  .contact {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: white;
   }
   
-  /* End Play More Pay less */
-  
-  /* Start Xbox */
-  
-  .xbox {
-    padding-top: var(--section-padding);
-    position: relative;
+  .special-heading {
+    color: #EBECED;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
   }
   
-  /* End Xbox */
+  .special-heading+p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+  }
+  
+  @media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+  
+    .special-heading+p {
+        margin: -15px 0 0;
+    }
+  }
+  
+  .contact .info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  .contact .info .label {
+    font-size: 35px;
+    font-weight: 800;
+    color:  #2C4755;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+  }
+  
+  .contact .info .link {
+    display: block;
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 767px) {
+  
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 25px;
+    }
+  }
+  
+  .contact .info .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .contact .info .social img {
+    margin-left: 10px;
+    width: 20px;
+  }
+  
+  .copyright {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    font-size: 10px;
+  }
+  
+  .copyright img {
+    height: 15px;
+  }
+  
+  /* End Contact */
