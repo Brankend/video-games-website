@@ -13,10 +13,16 @@ export default function Home(props) {
 
     function handleSignUp(e) {
       e.preventDefault();
-      if (password !== password_confirm) {
+      if(password.length<6)
+      {
+        alert("Password is too short");
+        return;
+      }
+      else if (password !== password_confirm) {
         alert("Passwords do not match");
         return;
       }
+      
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           console.log("You have signed up!");

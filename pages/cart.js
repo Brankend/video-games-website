@@ -18,7 +18,7 @@ import { auth } from "../firebase";
 
 export default function CartPage(props) {
   // Extracting cart state from redux store
-  const cart = useSelector((state) => state.cart);
+  let cart = useSelector((state) => state.cart);
   const [orderNumber, setOrderNumber] = useState(0);
   const router = useRouter();
 
@@ -41,41 +41,44 @@ export default function CartPage(props) {
 
   function confirmOrder() {
     
-    
-  // getOrderNumber
-  const getOrderNumber = async () => {
+    // getOrderNumber
+    const getOrderNumber = async () => {
     console.log(user.email);
     const docRef = doc(db, "Orders", user.email);
+    //console.log(docRef);
     const docSnap = await getDoc(docRef);
+    //console.log(docSnap.data());
     if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
-      await setOrderNumber(docSnap.data().orderCount);
-      makeOrder();
+      console.log("Document data:", docSnap.data().orderCount);
+      //await setOrderNumber(docSnap.data().orderCount);
+      makeOrder(docSnap.data().orderCount);
     } else {
+      console.log("Mo new");
       // doc.data() will be undefined in this case
       await setDoc(docRef, {
         orderCount: 0,
     });
     await setOrderNumber(0);
-    makeOrder();
+    makeOrder(0);
   };
 }
-
+  getOrderNumber();
   //make an order
-  const makeOrder = async () => {
-    const docRef = doc(db, "Orders", user.email, "orderNumber", orderNumber.toString());
+  const makeOrder = async (ordertest) => {
+    const docRef = doc(db, "Orders", user.email, "orderNumber",ordertest.toString());
     await setDoc(docRef, {
       order: cart,
     });
     const docRef2 = doc(db, "Orders", user.email);
-    setOrderNumber(orderNumber + 1);
+    setOrderNumber(ordertest + 1);
     await setDoc(docRef2, {
-      orderCount: orderNumber + 1,
+      orderCount: ordertest + 1,
     });
-    
+    cart=null;
     alert("Order Confirmed!");
+    window.location.reload();
   }
-  makeOrder();
+  //makeOrder();
 
 }
 
@@ -136,6 +139,7 @@ export default function CartPage(props) {
               ))}
               <h2>Grand Total: EGP {getTotalPrice()}</h2>
               <input className="inputsign" type="submit" onClick={confirmOrder} value="Make Order"/>
+
             </>
           )}
         </div>
