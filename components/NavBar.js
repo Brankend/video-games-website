@@ -41,16 +41,16 @@ export default function NavBar() {
         </Link>
         <ul className="nav-content">
           <li>
-            <a href="#hot-deals">Hot Deals</a>
+            <a href="/about#hot-deals">Hot Deals</a>
           </li>
           <li>
-            <a href="#play-more-pay-less">Play More Pay Less</a>
+            <a href="/about#play-more-pay-less">Play More Pay Less</a>
           </li>
           <li>
-            <a href="#xbox">Xbox</a>
+            <a href="/about#xbox">Xbox</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="/about#contact">Contact</a>
           </li>
           <li>
             <form onSubmit={handleLogOut}>
